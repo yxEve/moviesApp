@@ -11,7 +11,7 @@ const MovieListPage = () => {
     )
       .then(res => res.json())
       .then(json => json.results )
-      .then(movies => {
+      getMovies().then(movies => {
         setMovies(movies);
       });
   }, []);
